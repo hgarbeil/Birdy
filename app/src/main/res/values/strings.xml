@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Birdy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="FirstName">Bird Name </string>
+    <string name="AlternateName">Bird Name 2</string>
+    <string name="ScientificName">Scientific Name</string>
+    <string name="Construction">Construction halted due to Federal Government Cutbacks of vital services</string>
+
+</resources>
