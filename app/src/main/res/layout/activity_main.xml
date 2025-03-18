@@ -14,6 +14,7 @@
         android:orientation="horizontal"
         android:background="#dd9922"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteX="0dp"
         >
 
@@ -70,30 +71,29 @@
             app:layout_constraintTop_toTopOf="@+id/btn_byard"
             tools:layout_editor_absoluteX="209dp" />
 
-
-
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
-        tools:layout_editor_absoluteX="0dp"
-        android:background="#dd9922"
-        >
-        <Button
-            android:id="@+id/btn_dbase"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="3dp"
-            android:text="DBase"
-            android:visibility="visible"
-            app:cornerRadius="5dp"
-            app:layout_constraintTop_toTopOf="@+id/btn_sea"
-            tools:layout_editor_absoluteX="303dp" />
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/linearLayout"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        android:background="#dd9922"-->
+<!--        >-->
+<!--        <Button-->
+<!--            android:id="@+id/btn_dbase"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="3dp"-->
+<!--            android:text="DBase"-->
+<!--            android:visibility="visible"-->
+<!--            app:cornerRadius="5dp"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/btn_sea"-->
+<!--            tools:layout_editor_absoluteX="303dp" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
@@ -104,7 +104,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

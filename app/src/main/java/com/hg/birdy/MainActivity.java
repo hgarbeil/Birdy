@@ -1,5 +1,6 @@
 package com.hg.birdy;
 
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity  {
     Button btn_backyard, btn_forest, btn_sea, btn_dbase, btn_ponds ;
     FragmentManager fm ;
     DBFragment dbFragment ;
-
+    DBHelper db ;
 
 
     @Override
@@ -32,11 +33,13 @@ public class MainActivity extends AppCompatActivity  {
             return insets;
         });
         // get button ids
-        btn_dbase = findViewById(R.id.btn_dbase) ;
+        // btn_dbase = findViewById(R.id.btn_dbase) ;
         btn_backyard = findViewById(R.id.btn_byard) ;
         btn_forest =  findViewById(R.id.btn_forest) ;
         btn_sea = findViewById(R.id.btn_sea) ;
         btn_ponds = findViewById(R.id.btn_ponds) ;
+        // db = new DBHelper(this);
+        // Cursor crs = db.getData() ;
         setButtonActive(btn_backyard);
         // Fragment manager
         fm = getSupportFragmentManager() ;
@@ -44,18 +47,18 @@ public class MainActivity extends AppCompatActivity  {
 
         fm.beginTransaction().add(R.id.fragmentContainerView2, new RecyclerFragment(0)).commit() ;
 
-        btn_dbase.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // replace current fragment with the dbase fragment
-                FragmentTransaction transaction = fm.beginTransaction();
-                transaction.replace(R.id.fragmentContainerView2, new DBFragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-                setButtonActive (btn_dbase) ;
-
-            }
-        });
+//        btn_dbase.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // replace current fragment with the dbase fragment
+//                FragmentTransaction transaction = fm.beginTransaction();
+//                transaction.replace(R.id.fragmentContainerView2, new DBFragment());
+//                transaction.addToBackStack(null);
+//                transaction.commit();
+//                setButtonActive (btn_dbase) ;
+//
+//            }
+//        });
 
         btn_backyard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity  {
         btn_backyard.setBackgroundColor(Color.rgb(100,170,40)) ;
         btn_ponds.setBackgroundColor(Color.rgb(100,170,40)) ;
         btn_sea.setBackgroundColor(Color.rgb(100,170,40)) ;
-        btn_dbase.setBackgroundColor(Color.rgb(100,170,40)) ;
+        // btn_dbase.setBackgroundColor(Color.rgb(100,170,40)) ;
         try {
             btn.setBackgroundColor(Color.rgb(90,90,60));
         }

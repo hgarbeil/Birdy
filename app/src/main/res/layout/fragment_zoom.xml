@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cccc88"
+    android:background="#eeeeaa"
     tools:context=".ZoomFragment">
 
     <ImageView
@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/alala"
+        android:src="@drawable/apapane"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_zoom_name" />
@@ -25,9 +25,10 @@
         android:id="@+id/layout_tnails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:paddingHorizontal="24dp"
+        android:background="#F0F4C3"
         app:layout_constraintTop_toBottomOf="@+id/imageMain">
 
         <ImageView
@@ -35,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="64sp"
             android:layout_weight=".33"
-            android:src="@drawable/alala_2" />
+            android:src="@drawable/apapane" />
 
 
         <ImageView
@@ -43,14 +44,14 @@
             android:layout_width="0dp"
             android:layout_height="64sp"
             android:layout_weight=".33"
-            android:src="@drawable/alala_2" />
+            android:src="@drawable/apapane_2" />
 
         <ImageView
             android:id="@+id/imageTNail3"
             android:layout_width="0dp"
             android:layout_height="64sp"
             android:layout_weight=".33"
-            android:src="@drawable/alala_2" />
+            android:src="@drawable/apapane_3" />
     </LinearLayout>
 
     <TextView
@@ -71,7 +72,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="secondName"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_tnails" />
@@ -80,34 +81,71 @@
         android:id="@+id/tv_zoom_sciname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="ScienceName"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_zoom_name2" />
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tnails" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_desc1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:text="TextView"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_zoom_sciname" />-->
+
 
     <TextView
         android:id="@+id/tv_desc1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tv_zoom_sciname" />
+
+    <TextView
+        android:id="@+id/tv_habitat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#F0F4C3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc1" />
+
+    <TextView
+        android:id="@+id/tv_references"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_habitat" />
 
     <TextView
         android:id="@+id/tv_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#F0F4C3"
         android:text="Website"
-        android:textStyle="italic"
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_references" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

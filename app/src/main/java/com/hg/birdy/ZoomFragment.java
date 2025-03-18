@@ -24,7 +24,7 @@ public class ZoomFragment extends Fragment {
     int position ;
     BirdData birdData ;
     ImageView mainView, imageView_1, imageView_2, imageView_3 ;
-    TextView tv_name, tv_name2, tv_name3, tv_desc, tv_website ;
+    TextView tv_name, tv_name2, tv_name3, tv_desc, tv_website, tv_references, tv_habitat ;
 
     public ZoomFragment() {
         // Required empty public constructor
@@ -68,6 +68,8 @@ public class ZoomFragment extends Fragment {
         tv_name3 = view.findViewById(R.id.tv_zoom_sciname) ;
         tv_desc = view.findViewById(R.id.tv_desc1) ;
         tv_website = view.findViewById(R.id.tv_website) ;
+        tv_references = view.findViewById(R.id.tv_references) ;
+        tv_habitat = view.findViewById(R.id.tv_habitat) ;
 
 
         mainView.setImageResource(getDrawableId(birdData.imageName.get(position).toString()));
@@ -79,6 +81,8 @@ public class ZoomFragment extends Fragment {
         tv_name3.setText(birdData.scientificName.get(position)) ;
         tv_desc.setText(birdData.description.get(position)) ;
         tv_website.setText("More : "+birdData.website.get(position)) ;
+        tv_references.setText(birdData.references.get(position)) ;
+        tv_habitat.setText(birdData.habitat.get(position));
 
         imageView_1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -25,6 +25,8 @@ public class BirdData {
 
     List<String> description =  new ArrayList<String>();
     List<String> website =  new ArrayList<String>();
+    List<String> habitat =  new ArrayList<String>();
+    List<String> references = new ArrayList<String>();
 
     public BirdData (Context ctx){
        context = ctx ;
@@ -49,6 +51,9 @@ public class BirdData {
                 birdNames2.add(fields[1]) ;
                 scientificName.add(fields[2]) ;
                 description.add(fields[5]) ;
+                habitat.add(fields[10]) ;
+                String ref = "References : "+ fields[12] +"\nPhotos : "+fields[13]+", "+ fields[14]+", "+fields[15] ;
+                references.add (ref) ;
                 imageName.add(fields[6].trim()) ;
                 imageName2.add(fields[7].trim()) ;
                 imageName3.add(fields[8].trim()) ;
