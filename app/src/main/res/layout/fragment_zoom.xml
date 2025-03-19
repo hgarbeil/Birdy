@@ -25,10 +25,11 @@
         android:id="@+id/layout_tnails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="10dp"
         android:orientation="horizontal"
         android:paddingHorizontal="24dp"
-        android:background="#F0F4C3"
+        android:background="#EEEEC3"
         app:layout_constraintTop_toBottomOf="@+id/imageMain">
 
         <ImageView
@@ -54,6 +55,7 @@
             android:src="@drawable/apapane_3" />
     </LinearLayout>
 
+
     <TextView
         android:id="@+id/tv_zoom_name"
         android:layout_width="wrap_content"
@@ -65,29 +67,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_zoom_name2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/namebar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="secondName"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:orientation="horizontal"
+        android:background="#FFFFC3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_tnails" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_tnails"
+        >
 
-    <TextView
-        android:id="@+id/tv_zoom_sciname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="ScienceName"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_tnails" />
+        <TextView
+            android:id="@+id/tv_zoom_name2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="secondName"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/layout_tnails" -->
+
+
+        <TextView
+            android:id="@+id/tv_zoom_sciname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="ScienceName"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/layout_tnails" -->
+
+    </LinearLayout>
 
     <!--    <TextView-->
     <!--        android:id="@+id/tv_desc1"-->
@@ -110,7 +128,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tv_zoom_sciname" />
+        app:layout_constraintTop_toBottomOf="@+id/namebar" />
 
     <TextView
         android:id="@+id/tv_habitat"
