@@ -80,7 +80,7 @@ public class ZoomFragment extends Fragment {
         tv_name2.setText(birdData.birdNames2.get(position)) ;
         tv_name3.setText(birdData.scientificName.get(position)) ;
         tv_desc.setText(birdData.description.get(position)) ;
-        tv_website.setText("More : "+birdData.website.get(position)) ;
+        tv_website.setText(birdData.website.get(position)) ;
         tv_references.setText(birdData.references.get(position)) ;
         tv_habitat.setText(birdData.habitat.get(position));
 
@@ -102,6 +102,8 @@ public class ZoomFragment extends Fragment {
                 mainView.setImageResource(getDrawableId(birdData.imageName3.get(position).toString()));
             }
         });
+
+        // website to open for more info
         tv_website.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent();
