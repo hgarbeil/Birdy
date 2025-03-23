@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class ZoomFragment extends Fragment {
     BirdData birdData ;
     ImageView mainView, imageView_1, imageView_2, imageView_3 ;
     TextView tv_name, tv_name2, tv_name3, tv_desc, tv_website, tv_references, tv_habitat ;
+    TextView back_button ;
 
     public ZoomFragment() {
         // Required empty public constructor
@@ -70,6 +72,7 @@ public class ZoomFragment extends Fragment {
         tv_website = view.findViewById(R.id.tv_website) ;
         tv_references = view.findViewById(R.id.tv_references) ;
         tv_habitat = view.findViewById(R.id.tv_habitat) ;
+        back_button = view.findViewById(R.id.backButton) ;
 
 
         mainView.setImageResource(getDrawableId(birdData.imageName.get(position).toString()));
@@ -112,6 +115,15 @@ public class ZoomFragment extends Fragment {
                 intent.setData(Uri.parse(birdData.website.get(position)));
                 startActivity(intent);
             } });
+
+        back_button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().popBackStack() ;
+
+            }
+        });
 
         //mainView.setImageResource(R.drawable.amakihi);
         return view ;
